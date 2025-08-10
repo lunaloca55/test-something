@@ -51,8 +51,11 @@
                 <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
                 <li class="nav-item"><a class="nav-link" href="#tutorials">How-To Guides</a></li>
-                <li class="nav-item"><a class="nav-link" href="#calculator">Metrics Calculator</a></li>
+                <li class="nav-item"><a class="nav-link" href="#advanced-metrics">Advanced Metrics</a></li>
+                <li class="nav-item"><a class="nav-link" href="#video-library">Video Library</a></li>
+                <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
                 <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
             </ul>
             <button class="btn btn-primary">Login</button>
         </div>
@@ -70,52 +73,88 @@
     </div>
 </div>
 
-<!-- Resources Page -->
-<div id="resources" class="container mt-5">
-    <h2>Explore Our Digital Marketing Guides</h2>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">SEO Guide</h5>
-                    <p class="card-text">Learn how to optimize your website for search engines.</p>
-                    <a href="#" class="btn btn-primary">Access Full Guide</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Paid Media Strategy</h5>
-                    <p class="card-text">Master the art of paid advertising across platforms.</p>
-                    <a href="#" class="btn btn-primary">Access Full Guide</a>
-                </div>
-            </div>
-        </div>
-        <!-- Add more resources here -->
-    </div>
-</div>
-
-<!-- Metrics Calculator Page -->
-<div id="calculator" class="container mt-5">
-    <h2>Track and Analyze Your Campaigns</h2>
+<!-- Advanced Metrics Page -->
+<div id="advanced-metrics" class="container mt-5">
+    <h2>Advanced Marketing Metrics</h2>
     <div class="row">
         <div class="col-md-6">
-            <h4>CPC Calculator</h4>
-            <form id="cpc-form">
+            <h4>ROI Calculator</h4>
+            <form id="roi-form">
                 <div class="mb-3">
-                    <label for="cpc-budget" class="form-label">Budget</label>
-                    <input type="number" class="form-control" id="cpc-budget" placeholder="Enter budget">
+                    <label for="roi-investment" class="form-label">Investment</label>
+                    <input type="number" class="form-control" id="roi-investment" placeholder="Enter investment amount">
                 </div>
                 <div class="mb-3">
-                    <label for="cpc-clicks" class="form-label">Clicks</label>
-                    <input type="number" class="form-control" id="cpc-clicks" placeholder="Enter number of clicks">
+                    <label for="roi-return" class="form-label">Return</label>
+                    <input type="number" class="form-control" id="roi-return" placeholder="Enter return amount">
                 </div>
-                <button type="button" class="btn btn-primary" onclick="calculateCPC()">Calculate CPC</button>
-                <div id="cpc-result" class="mt-3"></div>
+                <button type="button" class="btn btn-primary" onclick="calculateROI()">Calculate ROI</button>
+                <div id="roi-result" class="mt-3"></div>
             </form>
         </div>
     </div>
+</div>
+
+<!-- Video Library Page -->
+<div id="video-library" class="container mt-5">
+    <h2>Master Digital Marketing with Video</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Facebook Ads</h5>
+                    <p class="card-text">Learn how to run effective Facebook ad campaigns.</p>
+                    <a href="#" class="btn btn-primary">Watch Video</a>
+                </div>
+            </div>
+        </div>
+        <!-- Add more video tutorials -->
+    </div>
+</div>
+
+<!-- FAQ Page -->
+<div id="faq" class="container mt-5">
+    <h2>Frequently Asked Questions</h2>
+    <div class="row">
+        <div class="col-md-12">
+            <h5>What is The MRS Collective?</h5>
+            <p>It’s an app designed to help marketers sharpen their skills with guides, tools, and tutorials.</p>
+
+            <h5>How do I cancel my subscription?</h5>
+            <p>You can cancel your subscription by visiting your profile page and selecting 'Cancel Subscription.'</p>
+
+            <h5>Can I access the content offline?</h5>
+            <p>Currently, all content requires an internet connection to view.</p>
+        </div>
+    </div>
+</div>
+
+<!-- User Progress Page -->
+<div id="user-progress" class="container mt-5">
+    <h2>Your Progress</h2>
+    <p>Track your learning and accomplishments in the app.</p>
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Completed Guides</h4>
+            <ul>
+                <li>SEO Basics</li>
+                <li>Paid Media Fundamentals</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h4>Upcoming Goals</h4>
+            <ul>
+                <li>Advanced Paid Media</li>
+                <li>Analytics Tools Overview</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- About Us Page -->
+<div id="about-us" class="container mt-5">
+    <h2>About Us</h2>
+    <p>We’re dedicated to empowering marketers with the tools they need to succeed in a fast-changing digital landscape. The MRS Collective brings expert guides, video tutorials, and useful calculators together in one platform.</p>
 </div>
 
 <!-- Footer -->
@@ -128,13 +167,13 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
-<!-- JavaScript for Metrics Calculator -->
+<!-- JavaScript for Metrics Calculators -->
 <script>
-    function calculateCPC() {
-        var budget = document.getElementById('cpc-budget').value;
-        var clicks = document.getElementById('cpc-clicks').value;
-        var cpc = budget / clicks;
-        document.getElementById('cpc-result').innerText = "Your Cost Per Click (CPC) is: $" + cpc.toFixed(2);
+    function calculateROI() {
+        var investment = document.getElementById('roi-investment').value;
+        var returnVal = document.getElementById('roi-return').value;
+        var roi = ((returnVal - investment) / investment) * 100;
+        document.getElementById('roi-result').innerText = "Your ROI is: " + roi.toFixed(2) + "%";
     }
 </script>
 
