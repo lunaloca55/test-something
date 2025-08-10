@@ -1,0 +1,33 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+}
+
+.navbar {
+    background-color: #1D3F4B;
+}
+
+.navbar-brand, .nav-link {
+    color: #DDD8C8 !important;
+}
+
+.btn-primary {
+    background-color: #1D3F4B;
+    border-color: #1D3F4B;
+}
+
+.btn-primary:hover {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.footer {
+    background-color: #1D3F4B;
+    color: #DDD8C8;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
